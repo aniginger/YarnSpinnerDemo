@@ -1,0 +1,36 @@
+﻿title: Start
+position: 33,-231
+---
+// Create the money and cost variables
+<<declare $money = 0>>
+<<declare $cost = 20>>
+// Set the value of money to the player's money from C#
+<<SetMoneyToYarn YarnFunctions>>
+Merchant: I have a sweet item! It's yours for 20 coins.
+// Check if the player has enough money
+// For better 
+<<if $money >= $cost>>
+    Merchant: You can buy it! Would you like to?
+    // Options for if the player wants to buy the item
+    -> Yes!
+        // Decrease the player's money by the cost of the item
+        <<set $money = $money - $cost>>
+        // Set the value of money in C# to the new amount
+        <<SetMoneyFromYarn YarnFunctions>>
+        Well hot dog! Thansk for the change!
+    -> No.
+        Fine... Suit yourself.
+<<else>>
+    Merchant: Not my fault you're broke.
+<<endif>>
+// Jump to a new node
+<<jump Next>>
+===
+
+title: Next
+position: -94,48
+---
+Narrator: This is a new node.
+Narrator: Very cool, man!
+Narrator: Dialogue is pretty sweet!
+===
