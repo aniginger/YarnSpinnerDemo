@@ -1,5 +1,5 @@
 ﻿title: Start
-position: 33,-231
+position: 30,-169
 ---
 // Create the money and cost variables
 <<declare $money = 0>>
@@ -17,9 +17,9 @@ Merchant: I have a sweet item! It's yours for 20 coins.
         <<set $money = $money - $cost>>
         // Set the value of money in C# to the new amount
         <<SetMoneyFromYarn YarnFunctions>>
-        Well hot dog! Thansk for the change!
+        Merchant: Well hot dog! Thansk for the change!
     -> No.
-        Fine... Suit yourself.
+        Merchant: Fine... Suit yourself.
 <<else>>
     Merchant: Not my fault you're broke.
 <<endif>>
@@ -28,9 +28,8 @@ Merchant: I have a sweet item! It's yours for 20 coins.
 ===
 
 title: Next
-position: -94,48
+position: -71,22
 ---
 Narrator: This is a new node.
-Narrator: Very cool, man!
 Narrator: Dialogue is pretty sweet!
 ===
